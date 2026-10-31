@@ -32,7 +32,7 @@ def analyze_bgr(image: np.ndarray) -> AnalysisResult:
     """Resize, denoise, find the leaf, and measure color on the resized original.
 
     Contrast adjustment is returned for display. It is not used for the area percentage,
-    so the percentage stays tied to the photograph rather than to the enhanced copy.
+    so the percentage stays tied to the photograph rather than to the enhanced image.
     """
     original = resize_max_side(image)
     denoised = denoise(original)

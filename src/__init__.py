@@ -1,1 +1,1 @@
-"""Image-processing steps for the plant-leaf portfolio demonstration."""
+"""Image-processing steps for plant-leaf photographs."""

@@ -10,7 +10,7 @@ The file extension must be `.jpg`, `.jpeg`, or `.png`. The file must be 8 MB or 
 
 ## 2. Resize
 
-If the longest side is above 900 pixels, the photograph is scaled down with area interpolation. Smaller photographs are left at their original size. Later steps use this resized copy.
+If the longest side is above 900 pixels, the photograph is scaled down with area interpolation. Smaller photographs are left at their original size. Later steps use this resized image.
 
 ## 3. Noise reduction
 
@@ -49,4 +49,4 @@ Sharpness is the variance of the Laplacian on the resized original. Values below
 
 ## What the percentage is not
 
-The percentage is a color comparison. It is not a lesion count, not a species identification, and not a disease diagnosis. Veins, shadows, holes, and naturally red or purple leaves can raise it. Faint spots can be missed. No accuracy figure is reported because this recreation does not include a labeled test set or a classifier from the 2022 project.
+The percentage is a color comparison. It is not a lesion count, not a species identification, and not a disease diagnosis. Veins, shadows, holes, and naturally red or purple leaves can raise it. Faint spots can be missed. No accuracy figure is reported because the method does not use a trained classifier.

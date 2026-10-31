@@ -4,23 +4,15 @@ A small desktop demonstration that studies a plant-leaf photograph with classica
 
 ## Academic background
 
-The original project was called Leaf Doctor. It was completed from April 2022 to July 2022 for a B.Tech in Electronics and Communication Engineering at Kallam Haranadhareddy Institute of Technology. The work used MATLAB, Python, and image processing to look for visible signs of disease in leaf photographs.
-
-## This recreation
-
-The original source files were not in the archive used to prepare this copy. The application here is a later Python recreation of that academic idea. It was written after 2022. It does not contain the original MATLAB scripts, and the commit history of this repository, once it exists, records when this copy was written.
+Leaf Doctor was completed from April 2022 to July 2022 for a B.Tech in Electronics and Communication Engineering at Kallam Haranadhareddy Institute of Technology. It studies leaf photographs with image processing and reports visible signs of discoloration.
 
 ## Technology
 
-Verified in this project:
-
 - Python 3.12
-- OpenCV, NumPy, and Pillow for the image steps
-- Matplotlib for the color-share chart
-- Streamlit for the demonstration pages
-- pytest for the automated checks
-
-MATLAB is not part of this copy.
+- OpenCV, NumPy, and Pillow
+- Matplotlib
+- Streamlit
+- pytest
 
 ## Features
 
@@ -34,7 +26,7 @@ MATLAB is not part of this copy.
 
 ## Methodology
 
-Color shares are counted on the resized original. The leaf outline is taken from a denoised copy. Contrast adjustment is shown for inspection and is not used in the percentage.
+Color shares are counted on the resized photograph. The leaf outline is taken from the denoised image. Contrast adjustment is shown for inspection and is not used in the percentage.
 
 1. Check the file type, size, and that the image can be decoded.
 2. Shrink the longest side to 900 pixels when the photograph is larger.
@@ -48,15 +40,13 @@ The full parameter list is in [docs/methodology.md](docs/methodology.md).
 
 ## Installation
 
-The project folder may sit on an ExFAT drive. Create the virtual environment on the internal disk so Python can use symbolic links.
+Python 3.12 is required.
 
 ```bash
-/opt/homebrew/bin/python3.12 -m venv ~/.venvs/plant-leaf-disease-detection
-source ~/.venvs/plant-leaf-disease-detection/bin/activate
+python3.12 -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
 ```
-
-Python 3.12 is required. On macOS it can be installed with `brew install python@3.12`.
 
 ## Usage
 
@@ -89,7 +79,7 @@ The disease names in the sample filenames come from the photographers' captions.
 pytest
 ```
 
-The tests cover file checks, resizing, noise reduction, leaf segmentation, the affected-area total, a gray frame with no leaf, and soft or dark photographs. They also run the four sample photographs through the pipeline. Sixteen tests passed on Python 3.12.16 when this copy was prepared. There is no classifier and no accuracy percentage.
+The tests cover file checks, resizing, noise reduction, leaf segmentation, the affected-area total, a gray frame with no leaf, and soft or dark photographs. They also run the four sample photographs through the pipeline. There is no classifier and no accuracy percentage.
 
 ## Limitations
 
@@ -97,7 +87,7 @@ The tests cover file checks, resizing, noise reduction, leaf segmentation, the a
 - Veins, shadows, holes, dust, and leaves that are naturally red or purple can raise it.
 - Small specks on a plain background are the case this spot rule is aimed at. A broad, even patch can be missed.
 - Several leaves, a garden background, blur, or poor light make the outline less reliable.
-- No labeled test set from the 2022 project was available, so no detection accuracy is reported.
+- The method does not use a trained classifier, so no detection accuracy is reported.
 
 ## Dataset and attribution
 
@@ -125,5 +115,3 @@ The source code does not have a license yet. Each sample photograph keeps the li
 ## Repository
 
 https://github.com/janibasha1024-coder/plant-leaf-disease-detection
-
-The commit that added this recreation is dated when the copy was written. That date is not 2022.

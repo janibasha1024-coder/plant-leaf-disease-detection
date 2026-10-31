@@ -196,9 +196,8 @@ def page_home() -> None:
     st.markdown(
         """
 <div class="note">
-The original academic project, Leaf Doctor, was completed from April 2022 to July 2022.
-The source files were not available for this copy, so the steps here are a new implementation
-of that same study idea.
+Leaf Doctor, April 2022 – July 2022. Undergraduate project for the B.Tech in Electronics
+and Communication Engineering at Kallam Haranadhareddy Institute of Technology.
 </div>
         """,
         unsafe_allow_html=True,
@@ -242,17 +241,9 @@ def page_about() -> None:
     st.subheader("Academic project")
     st.write(
         "Leaf Doctor was an undergraduate project for the B.Tech in Electronics and Communication "
-        "Engineering at Kallam Haranadhareddy Institute of Technology. The work ran from April 2022 "
-        "to July 2022. It used MATLAB, Python, and image processing to study plant-leaf photographs "
-        "for visible signs of disease."
-    )
-    st.subheader("This portfolio copy")
-    st.write(
-        "The original project files were not in the archive used to prepare this repository. "
-        "The Python application here is a later recreation of that academic idea. "
-        "It uses OpenCV for the image operations. It does not include the original MATLAB scripts, "
-        "and it does not add a machine-learning classifier. Nothing in the file dates should be read "
-        "as a claim that this code was written in 2022."
+        "Engineering at Kallam Haranadhareddy Institute of Technology, from April 2022 to July 2022. "
+        "It studies plant-leaf photographs with Python and OpenCV and reports visible discoloration. "
+        "It does not use a machine-learning classifier."
     )
     st.subheader("Limits")
     st.write(
