@@ -1,0 +1,49 @@
+"""Fixed settings for validation and the image-processing steps."""
+
+MAX_IMAGE_BYTES = 8 * 1024 * 1024
+MIN_SIDE_PX = 64
+MAX_PIXELS = 24_000_000
+MAX_SIDE_PX = 900
+
+BILATERAL_D = 9
+BILATERAL_SIGMA_COLOR = 75
+BILATERAL_SIGMA_SPACE = 75
+
+CLAHE_CLIP = 2.0
+CLAHE_TILE = (8, 8)
+
+# OpenCV HSV hue is 0–179. This range covers green vegetation.
+GREEN_HUE_LOW = 25
+GREEN_HUE_HIGH = 95
+GREEN_SAT_MIN = 35
+GREEN_VAL_MIN = 35
+
+# Yellow-green tissue is kept in the leaf mask so a pale leaf is not dropped.
+YELLOW_HUE_LOW = 12
+YELLOW_HUE_HIGH = 35
+YELLOW_SAT_MIN = 40
+YELLOW_VAL_MIN = 70
+
+MIN_LEAF_AREA_RATIO = 0.05
+MIN_CONTOUR_AREA = 800
+
+# OpenCV CIE Lab stores a* and b* shifted by 128.
+LAB_BROWN_A = 145
+LAB_YELLOW_B = 158
+LAB_YELLOW_A_LOW = 118
+LAB_YELLOW_A_HIGH = 150
+LAB_HEALTHY_A = 136
+
+# A spot is a compact area that is darker than the leaf around it.
+SPOT_SIGMA = 9
+SPOT_DELTA = 32
+SPOT_BORDER_PX = 4
+SPOT_MIN_AREA = 12
+
+SOFT_SHARPNESS = 60.0
+DARK_LIGHTING = 55.0
+BRIGHT_LIGHTING = 215.0
+
+LOCALIZED_AFFECTED = 1.5
+WIDESPREAD_AFFECTED = 15.0
+REPORT_COLOR_SHARE = 1.0
